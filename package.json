@@ -1,0 +1,32 @@
+{
+  "name": "server_project_28.09.25",
+  "version": "1.0.0",
+  "description": "Stage 1 Express server with in-memory DB and health check",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Hadas",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HadasSigron/server_project_28.09.25.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HadasSigron/server_project_28.09.25/issues"
+  },
+  "homepage": "https://github.com/HadasSigron/server_project_28.09.25#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

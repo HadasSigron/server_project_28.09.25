@@ -1,0 +1,25 @@
+// index.js
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// middlewares
+app.use(express.json());
+
+// health/root
+app.get('/', (req, res) => {
+  res.json({ ok: true, message: 'Hello from Express server 👋' });
+});
+
+// /items router
+const itemsRouter = require('./routers/router');
+app.use('/items', itemsRouter);
+
+// health
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
+app.listen(PORT, () => {
+  console.log(`Server listening on http://localhost:${PORT}`);
+});
