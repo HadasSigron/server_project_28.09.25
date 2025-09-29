@@ -8,7 +8,17 @@ function generateToken() {
   return token;
 }
 
+function revokeToken(token) {
+  const index = activeTokens.indexOf(token);
+  if (index !== -1) {
+    activeTokens.splice(index, 1);
+    return true;
+  }
+  return false;
+}
+
 module.exports = {
   generateToken,
+  revokeToken,
   activeTokens,
 };
