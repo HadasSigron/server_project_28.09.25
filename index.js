@@ -8,12 +8,12 @@ app.use(cors());
 app.use(express.json());
 
 // health/root
-app.get('/', (req, res) => {
-  res.json({ ok: true, message: 'Hello from Express server 👋' });
-});
+const authRouter  = require('./routers/auth_router');
+app.use('/', authRouter);
+
 
 // /items router
-const itemsRouter = require('./routers/router');
+const itemsRouter = require('./routers/items_router');
 app.use('/items', itemsRouter);
 
 // health
@@ -24,3 +24,6 @@ app.get('/health', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
 });
+
+
+
