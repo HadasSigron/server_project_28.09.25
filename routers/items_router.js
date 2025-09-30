@@ -1,9 +1,12 @@
-
-// routers/items_router.js
 const express = require('express');
+const { isLoggedin } = require('../middleware/isLoggedin');
+
 const router = express.Router();
 
-// dummy database books 
+// ✅ הגנה על כל הנתיבים תחת /items
+router.use(isLoggedin);
+
+// dummy data
 let items = [
   { id: 1, title: 'Book One', author: 'Alice' },
   { id: 2, title: 'Book Two', author: 'Bob' },

@@ -1,5 +1,5 @@
 const express = require('express');
-const { generateToken, revokeToken, activeTokens } = require('../utils/tokens');
+const { generateToken, revokeToken, activeTokens } = require('../service/tokens');
 
 const router = express.Router();
 
